@@ -1,0 +1,247 @@
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    font-family: sans-serif;
+}
+
+.headerAdmin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+
+    box-shadow: 1px 4px 5px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 4px 5px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 4px 5px -4px rgba(0, 0, 0, 0.75);
+}
+
+.headerAdminContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1240px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo span {
+    margin-left: 10px;
+}
+
+.headerActions {
+    display: flex;
+    min-width: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.content {
+    width: 90%;
+    max-width: 1240px;
+}
+
+.titulo {
+    display: flex;
+    min-width: 450px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.titulo p {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.titulo a {
+    padding: 10px 15px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.borda {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid #ccc; */
+    margin: 0;
+    border-radius: 8px;
+}
+
+.bordaContent {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 250px 250px 250px;
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cliente {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 7px;
+    /* gap: 10px; */
+    width: 100%;
+    height: 200px;
+
+    box-shadow: 2px 3px 14px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 3px 14px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 3px 14px -8px rgba(0, 0, 0, 0.75);
+}
+
+.clienteTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.clienteInfo {
+    font-size: 13px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2px
+}
+
+.actionButton {
+    flex: 1;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: #000;
+    color: #fff;
+}
+
+.link {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* --------- */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000090;
+    opacity: 1;
+    z-index: 1;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    margin: 15vh auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+}
+
+.modalHeader {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
+}
+
+
+
+.modalClose {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.modalClose:hover {
+    background-color: #FF4949;
+    color: white;
+}
+
+.modalForm {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.modalField {
+    width: calc(50% - 10px);
+    height: 40px;
+    outline-style: none;
+    border-style: none;
+    box-shadow: 0 0 2px black;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.modalField:focus {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 3px var(--primary-color);
+}
+
+
+.modalFooter {
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}
+
+@media (max-width:480px) {
+    .modal {
+        top: 100%;
+        transition: all 1s ease;
+    }
+
+    .modal.active {
+        top: 0;
+    }
+
+    .modalContent {
+        margin: 0;
+        width: 100%;
+        position: fixed;
+    }
+
+    .modalField {
+        width: 100%;
+    }
+}
